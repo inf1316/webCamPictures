@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>WebCam</title>
+    <script src="jquery/1.11.1jquery.min.js"></script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script type="application/javascript" src="js/camara.js"></script>
+    <script type="text/javascript" src="js/drag&drop.js"></script>
+    <script src="notifications/jquery.mininoty.js"></script>
+
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <link rel="stylesheet" href="boostrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="notifications/style.css">
+</head>
+    <body id="cuerpo">
+        <div class="container">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"><span class="glyphicon glyphicon-camera"></span>&nbsp;WebCam</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-offset-4">
+                                    <video id="video" width="200" height="150" autoplay="autoplay" muted="muted"></video>
+                                    <canvas id="picture" hidden="hidden" ></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" id="selfies"><span class="glyphicon glyphicon-camera"></span>&nbsp;Hacer Foto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="drop_zone">
+                <div class="col-md-offset-5">
+                    <img src="img/1.png" id="img" data-toggle="modal" data-target="#myModal" class="img-thumbnail">
+                    <canvas id="drap" hidden="hidden"></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
